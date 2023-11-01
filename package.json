@@ -1,0 +1,20 @@
+{
+  "name": "calendar-backend",
+  "version": "1.0.0",
+  "description": "Calendar TypeScript Node Express app",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "nodemon index.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "@types/node": "^14.14.37",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
