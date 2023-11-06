@@ -16,3 +16,5 @@ const port = !isNaN(parseInt(process.env.PORT as string)) ? parseInt(process.env
 app.listen(port, () => {
   console.log(`Express server listening to port ${port}`)
 })
+
+export default app
