@@ -1,5 +1,5 @@
 import { type RequestHandler, Router } from 'express'
-import { createUser, loginUser, renewToken } from '../controllers/auth'
+import { createUser, loginUser, renewToken, verifyAuth } from '../controllers/auth'
 import { check } from 'express-validator'
 import { checkFields, validateJWT } from '../middlewares'
 
@@ -19,5 +19,6 @@ router.post('/', [
   checkFields
 ], loginUser as RequestHandler)
 router.get('/renew', [validateJWT], renewToken as RequestHandler)
+router.get('/', verifyAuth)
 
 export default router

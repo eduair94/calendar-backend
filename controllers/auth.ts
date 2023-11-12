@@ -81,3 +81,10 @@ export const renewToken = async (req: AuthRequest, res: Response) => {
     token
   })
 }
+
+export const verifyAuth = (req: Request, res: Response) => {
+  res.json({
+    ok: true,
+    msg: 'Token is valid'
+  })
+}
